@@ -1,0 +1,633 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>11月1日 - 羊驼之城ALPA代币预售即将开始！</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8fca7423-59d9-4237-81c5-c0d18aa78bfe" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📆</span></div><h1 class="page-title">11月1日 - 羊驼之城ALPA代币预售即将开始！</h1></header><div class="page-body"><p id="7e0ad196-be24-43b4-9661-a0349e33f585" class="">羊驼之城团队 ｜ 2020年10月31日</p><p id="4ccbab79-bbf2-4e24-8f52-ba633c01a5c9" class="">
+</p><p id="249539a0-6511-4ef9-922a-a7bcabf88dfe" class="">亲爱的羊驼之城公民们，</p><p id="e8a9b92f-208c-4417-8a44-2eb2322a0e53" class="">在过去的几天里，羊驼之城的第一轮及第二轮NFT预售已圆满结束。我们的预售收到了500+的申请，其中78名幸运用户成为了羊驼之城的第一批牧羊人。羊驼之城团队由衷感谢来自社区的支持。我们在此诚挚邀请您参与我们第一场也是唯一一场的ALPA代币预售和社区空投活动。</p><p id="0c7d9d8d-607a-4b7d-9796-e1e4eec0c53f" class="">更多项目详情请参考羊驼之城城市指南。</p><h2 id="babe7dbb-f771-418f-9e0b-654f04ad840c" class=""><strong>ALPA代币预售</strong></h2><hr id="c15989b6-4428-45ac-85d3-21040dbeb59d"/><p id="48ea130b-d556-4bf9-aae7-22aa85fa8ae8" class="">ALPA代币预售将于2020年11月2日举行。这将是我们第一场且唯一一场代币预售活动。 </p><ul id="d35dc7b8-6599-4a47-a955-3efac69f44b1" class="bulleted-list"><li>代币预售总量: 1,800,000 ALPA</li></ul><ul id="5d56181b-801b-44ca-8d20-784e38486f13" class="bulleted-list"><li>价格: 1800 ALPA / ETH</li></ul><ul id="7ad1e3b4-9c29-490f-aa35-30a42bfa743e" class="bulleted-list"><li>购买数量限制: 10 ETH (18,000 ALPA) /人</li></ul><ul id="35c4bbf0-c661-4101-96e0-46a471f13291" class="bulleted-list"><li>发放: 代币被购买后将会立刻发放到购买者账户</li></ul><h3 id="87fbac0f-c1ff-4021-a102-d08b819a44f9" class="">羊驼之城<strong>团队将如何分配使用这批资金？</strong></h3><ul id="71374c42-be25-4ea3-8614-0e49a0aff11d" class="bulleted-list"><li>60% 将会的融资金额将在预售完成后立即加入进Uniswap做ALPA/ETH的初始LP，并锁在Unicryt上</li></ul><ul id="292a8390-6628-470e-b254-1870326aa33b" class="bulleted-list"><li>20% 将会用于3个月的开发费用</li></ul><ul id="e3bebd52-4985-4df7-84e9-01f16066e364" class="bulleted-list"><li>10% 将会用于市场营销</li></ul><ul id="4ecbcaf6-e1fe-4f44-bebb-a01f821d6490" class="bulleted-list"><li>10% 将会预留给未来的运营费用</li></ul><h3 id="49d2b87b-60ad-4ead-863d-f6f24c53df2a" class=""><strong>预售轮次</strong></h3><ul id="96336bd6-042b-4ee4-81c4-b6fd06f10ab4" class="bulleted-list"><li>社区公开轮次 — 1,260,000 ALPA将预留给社区成员。</li></ul><ul id="436c85db-0cea-484a-b042-fb3768c8c21b" class="bulleted-list"><li>白名单轮次 — 540,000 ALPA将预留给白名单成员。白名单成员是预留给未来会为羊驼之城项目提供持续支持的合作伙伴。该名单为邀请制。 </li></ul><h3 id="35f42af3-81de-4f67-b3d1-15417d525cc4" class=""><strong>如何参加公开预售？</strong></h3><ul id="63148008-cb7a-41d3-98df-0cfe2887a3d9" class="bulleted-list"><li>在申请表中提交你的账号地址进行报名。</li></ul><ul id="54602046-f12f-4ec1-873f-817146179230" class="bulleted-list"><li>报名将于美国西部时间 11月2日早上5点截止。</li></ul><ul id="48613598-d8fa-46f4-a546-e89d9d9e57e3" class="bulleted-list"><li>公开预售将于美国西部时间 11月2日早上7点开始。</li></ul><ul id="bb6a043b-7a3d-45b7-8fda-5a78548e4aad" class="bulleted-list"><li>预售通道开启后，参与者将可以在alpaca.city/tokenPresale页面进行代币购买。</li></ul><h3 id="76cc8607-c478-4f13-90cc-c972d21ee1f9" class=""><strong>参加公开预售后下一步是什么？</strong></h3><ul id="fde6b75b-3ec8-48ba-b179-a3de41fb82be" class="bulleted-list"><li>我们将空投ALPA代币给羊驼NFT持有者 （详情请见最后一段）。 </li></ul><ul id="d18341b8-2fb5-4212-8f67-c28c96447cca" class="bulleted-list"><li>给Uniswap上ALPA/ETH的交易对添加初始流动性</li></ul><ul id="05f087fd-2c0e-44d0-8cb3-f0c12260e385" class="bulleted-list"><li>羊驼繁育及ALPA质押功能开启！！！</li></ul><ul id="01703d03-0cb0-4089-86b6-7c59e9b90f2c" class="bulleted-list"><li>农场功能将于下周上线。</li></ul><p id="ff79c91d-2b3a-4567-80c2-9e3c30b8af8f" class="">
+</p><h1 id="4ad1f934-8888-4bce-a993-14e72c0b4761" class="">ALPA: 城市的核心功能型代币</h1><hr id="33b46a24-dcdb-43a2-a65c-7cfc8d8f83b2"/><p id="5fe882f2-1c2b-4d50-bf43-51524fe30a3e" class="">ALPA是羊驼之城的核心代币。ALPA持有人可以使用ALPA让羊驼繁育生宝宝，质押获得分红，参与社区治理投票，以及消费于其它场景增强羊驼的属性。</p><ul id="205c2771-d6af-4954-b50c-683430c2bbff" class="bulleted-list"><li>繁育: 让羊驼生宝宝。花在繁育上的费用将由协议收取。该功能将于ALPA预售结束后上线。</li></ul><ul id="ef8357fb-2d30-4687-b305-149def1a4a44" class="bulleted-list"><li>质押: ALPA持有人可以在这里将ALPA质押，成为ALPA质押持有人。ALPA持有人可以获得所有协议收取费用的90%作为分红，剩余的部分分配给羊驼之城团队以保证城市的长期可持续发展。</li></ul><ul id="991458ef-2e23-4cbd-a30c-0fae6ba51783" class="bulleted-list"><li>投票: 参与ALPA质押的公民还可以为社区提议投票，参与城市治理，并且决定城市治理基金的使用。</li></ul><ul id="0f2e46cc-e98c-47c6-b83c-a8a9237833e8" class="bulleted-list"><li>消费: 更多功能例如“精品店”将于未来启动，你可以在精品店里为你的羊驼购买装备，使用ALPA消费，为你的羊驼宝宝增强能量，也同时为ALPA提供更多使用场景。所以消费的费用都会由协议收取，并重新分红给质押持有人。</li></ul><p id="8f0c12f3-3af4-4176-92f2-966fcc26e74d" class="">
+</p><p id="bc444460-251f-4fe8-95f2-2960d807cecd" class="block-color-pink_background"> 通证详情</p><ul id="6d1efc76-8959-4528-857a-c3ff4e6b2012" class="bulleted-list"><li><strong>名称:</strong> ALPA Token</li></ul><ul id="fe141d7e-e3d7-493e-bc12-741612fa20a4" class="bulleted-list"><li><strong>代号:</strong> ALPA</li></ul><ul id="e1ea7c8c-07cf-43cc-bad4-bf03cc2acfed" class="bulleted-list"><li><strong>网络:</strong> 以太坊</li></ul><ul id="580f0ec5-6a21-43d2-aff6-bc27e2926b76" class="bulleted-list"><li><strong>制式:</strong> ERC-20</li></ul><ul id="766e71e1-1f01-444d-bc20-7cc05c8d98dc" class="bulleted-list"><li><strong>合约地址: </strong><a href="https://etherscan.io/address/0x7cA4408137eb639570F8E647d9bD7B7E8717514A">0x7cA4408137eb639570F8E647d9bD7B7E8717514A</a></li></ul><p id="ae598776-0fd3-485f-9608-0b04f61de3aa" class="">
+</p><p id="474a4d68-734b-4337-9d7e-820dd9b90401" class="block-color-pink_background"> 通证分配</p><ul id="1573275e-dac7-4fcf-a832-66689a539126" class="bulleted-list"><li>初始流通总量: 2,930,000 ALPA。包括:<ul id="638d2c73-2c7a-4d3c-9471-375d6e810924" class="bulleted-list"><li>预售轮: 1,800,000 ALPA  </li></ul><ul id="34681d71-7cca-43bb-8e59-c513f53c44ca" class="bulleted-list"><li>社区空投: 50,000 ALPA</li></ul><ul id="b77e4250-23d6-4e30-9b72-2315b371e7c7" class="bulleted-list"><li>初始Uniswap LP: 1,080,000 ALPA and 600 ETH </li></ul></li></ul><ul id="b6da62c6-f1b9-44ff-8fd7-793048a8bf79" class="bulleted-list"><li>从农场功能上线开始，新的ALPA通证开始增发，初始每个区块新产生37.5个ALPA，每四周减半，直到24周以后，维持在每个区块新产生0.59个ALPA。新产生的ALPA中：<ul id="f97d251a-bb85-4eb7-babb-6137760ad712" class="bulleted-list"><li>80% 分配给挖矿作为挖矿收益</li></ul><ul id="8b2a143f-120e-4c1a-be88-043951bc44d6" class="bulleted-list"><li>10% 分配给城市治理基金</li></ul><ul id="d6db2283-db43-458d-b9fb-15167219dd4b" class="bulleted-list"><li>10% 分配给羊驼之城团队</li></ul></li></ul><figure id="9d3da0f3-6881-433d-ab89-a0b57d465b49" class="image"><a href="11%E6%9C%881%E6%97%A5%20-%20%E7%BE%8A%E9%A9%BC%E4%B9%8B%E5%9F%8EALPA%E4%BB%A3%E5%B8%81%E9%A2%84%E5%94%AE%E5%8D%B3%E5%B0%86%E5%BC%80%E5%A7%8B%EF%BC%81%208fca742359d9423781c5c0d18aa78bfe/Screen_Shot_2020-10-29_at_9.15.29_PM.png"><img style="width:1164px" src="11%E6%9C%881%E6%97%A5%20-%20%E7%BE%8A%E9%A9%BC%E4%B9%8B%E5%9F%8EALPA%E4%BB%A3%E5%B8%81%E9%A2%84%E5%94%AE%E5%8D%B3%E5%B0%86%E5%BC%80%E5%A7%8B%EF%BC%81%208fca742359d9423781c5c0d18aa78bfe/Screen_Shot_2020-10-29_at_9.15.29_PM.png"/></a></figure><h1 id="94fa93a4-54e6-49a7-9dcf-d8b9f6a19b5d" class=""><strong>ALPA社区空投</strong></h1><hr id="c417e71d-44db-4044-b240-fdc2dbba00d3"/><p id="64a3c45f-0724-45f4-a2de-9fb5fcdd601f" class="">我们将为目前已拥有羊驼的社区成员举行总价值50,000 ALPA的空投活动。</p><ul id="aea8a1ab-0dd4-4867-bd67-60c81d6aa780" class="bulleted-list"><li>代币空投将会根据截止到10月27日，美国西部时间10:30 PM羊驼NFT持有者所拥有的羊驼数量进行分配。</li></ul><ul id="c3b5dd06-2289-44b1-a388-bb299b3d76f9" class="bulleted-list"><li>每一个羊驼NFT持有者将会收到所拥有羊驼数量十倍的ALPA代币。如果你拥有的羊驼数量为10，你将会收到100 ALPA的空投奖励。</li></ul><ul id="fe5fc219-2db7-4691-ba02-85c945f87fd3" class="bulleted-list"><li>空投将于ALPA代币预售结束之后进行分配。</li></ul><p id="91490bd4-9095-4f7b-8451-79b4093bbac5" class="">
+</p><h3 id="f038c013-b692-4958-8890-c0cf1812225c" class="">更多详情请关注我们的社交平台及其他社区</h3><ul id="3d9c70cf-647d-4004-8062-be321a9305ed" class="bulleted-list"><li>羊驼之城 市中心(主页) — <a href="https://alpaca.city/">https://alpaca.city</a></li></ul><ul id="2c5ef4fa-ba96-423d-bde2-d9bc06bcbe51" class="bulleted-list"><li>市集 (<strong>Open Sea</strong>) —<a href="https://opensea.io/collection/alpacacity"> https://opensea.io/collection/alpacacity</a></li></ul><ul id="a9fb1134-b443-4952-976e-0e5e6ae9d410" class="bulleted-list"><li>羊驼之城 大会堂 (<strong>Discord</strong>) — <a href="https://discord.io/AlpacaCity">https://discord.io/AlpacaCity</a></li></ul><ul id="67b17621-a1ce-450b-b0f0-ccd275603476" class="bulleted-list"><li>羊驼之声 (推特) — <a href="https://twitter.com/CityAlpaca">https://twitter.com/CityAlpaca</a></li></ul><ul id="e96155eb-b37d-4b3f-a37a-c72848398efb" class="bulleted-list"><li>社区中心 (电报群) — <a href="https://t.me/AlpacaCity">https://t.me/AlpacaCity</a></li></ul><ul id="d8696917-3378-45da-8381-97ffdb1bc1dc" class="bulleted-list"><li>中文博客 - <a href="https://alpacacity.github.io/cn-blog">https://alpacacity.github.io/cn-blog</a> </li></ul><ul id="c78ecc9e-5b88-4718-8264-f5aa9f66dc7e" class="bulleted-list"><li>公告板 (<strong>Medium</strong>) — <a href="https://medium.com/AlpacaCity">https://medium.com/AlpacaCity</a></li></ul><ul id="e6ada759-ff87-4e62-946c-5ebd4c0258d1" class="bulleted-list"><li>羊驼画廊 (<strong>Instagram</strong>) — <a href="https://instagram.com/CityAlpaca">https://instagram.com/CityAlpaca</a></li></ul><ul id="f8056471-0d56-4161-abdf-fa92482c3bbd" class="bulleted-list"><li>城市风采 (邮件订阅) — <a href="https://alpaca.substack.com/">https://alpaca.substack.com/</a></li></ul><ul id="a2b799a2-84ed-4a6a-8e1c-3b0f29a88f16" class="bulleted-list"><li>羊驼图书馆 (<strong>Github</strong>) — <a href="https://github.com/AlpacaCity">https://github.com/AlpacaCity</a></li></ul><p id="8a4b90ae-6efc-4119-99e0-1282b890b969" class="">
+</p></div></article></body></html>
