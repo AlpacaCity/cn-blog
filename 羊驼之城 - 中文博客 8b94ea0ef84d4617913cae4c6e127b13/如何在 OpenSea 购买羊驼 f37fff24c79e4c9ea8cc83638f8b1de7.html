@@ -1,0 +1,647 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>如何在 OpenSea 购买羊驼</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f37fff24-c79e-4c9e-a8cc-83638f8b1de7" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/2af1be7-opensea-logomark-flat-colored-white.png"/></div><h1 class="page-title">如何在 OpenSea 购买羊驼</h1></header><div class="page-body"><p id="46226680-2f28-4877-8ac4-4eb5b03f0afb" class="">
+</p><p id="3963170b-6a3c-4126-843e-31e267b5342c" class="">在OpenSea购买羊驼开始前，最好请事先备好梯子。</p><p id="0954e2cd-f566-4416-81ef-59954ca7a2e3" class="">
+</p><h3 id="ebed5cf5-982b-45b3-bc16-da38608ee2f8" class="">电脑版</h3><hr id="393b116c-cb41-4183-be3e-79ed5afe0293"/><p id="07af05a9-4eb4-4fd0-a5b5-887dcf002d4b" class="">1. 在OpenSea购买NFT需在chrome或者Firefox浏览器中下载MetaMask（以太坊小狐狸钱包）插件。</p><p id="8030dd85-38d9-4766-8040-15944c1f85c2" class="">2. 首先下载Google Chrome或FireFox浏览器。通过浏览器进入MetaMask官网<a href="https://metamask.io/">https://metamask.io/</a>，点击主页左右上角“Download”按钮进入下载页面。</p><div id="dd93465f-8b5b-4175-b75b-deb8b82394ea" class="column-list"><div id="6bae19cc-43b6-4105-863a-1f619dc79837" style="width:50%" class="column"><figure id="25c198fa-fcbb-4a84-a6d8-c1675e435644" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_9.56.25_PM.png"><img style="width:2348px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_9.56.25_PM.png"/></a></figure></div><div id="8d548c1f-e66d-4d4a-91d4-89d66b8431f3" style="width:50%" class="column"><figure id="e2c99c12-2f2f-42d5-a613-9aa86f3df745" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_10.04.50_PM.png"><img style="width:2326px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_10.04.50_PM.png"/></a></figure></div></div><p id="ff3c0725-3721-4a6b-8bb7-c0da3b6e5715" class="">3. 选择相应的系统类别进行下载并点击&quot;Add to chrome&quot;进行添加。</p><p id="d5693e66-230e-4a63-89b4-f0ce108e30ab" class="">4. 点击 &quot;Add extension&quot;添加插件到浏览器。</p><div id="bc5ebd85-f29e-4907-a65d-e7d25c21c9ea" class="column-list"><div id="a893f733-44ec-4cef-91eb-46323e415c88" style="width:50%" class="column"><figure id="4343374f-3438-4af0-a77d-253659551e17" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_10.16.03_PM.png"><img style="width:898px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_10.16.03_PM.png"/></a></figure></div><div id="96420548-ccef-49bd-81db-013542eca5c4" style="width:50%" class="column"><figure id="a9a12069-9a17-4f28-aeba-63a7965229c2" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_10.18.41_PM.png"><img style="width:720px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_10.18.41_PM.png"/></a></figure></div></div><p id="0c5a71ed-b716-48de-bec3-3523cff69e53" class="">5. 插件添加完成后，系统会自通跳转到钱包设置页面。点击&quot;Get Started&quot;开始设置。</p><p id="14a3e076-2286-42da-a978-32e14d078005" class="">6.  如果已注册过钱包，可选择“Import Wallet&quot;通过2个英文助记词(Secret Backup Phrase)进行登录。如果是新用户，可选择“Create Wallet&quot;进行创建。</p><div id="2dc2bed3-0438-427e-b689-fb455cc78a4a" class="column-list"><div id="c7465ba1-3248-4d1d-bbe8-e76f29437793" style="width:50%" class="column"><figure id="97db7ee9-4f32-4466-ba4a-7753b216dfd2" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_9.01.25_PM.png"><img style="width:2132px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_9.01.25_PM.png"/></a></figure></div><div id="704eeade-390a-4d2d-adf5-b03cde72db0b" style="width:50%" class="column"><figure id="a4809fd1-7445-4d76-9e3b-38d862b4e31c" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_9.01.50_PM.png"><img style="width:980px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_9.01.50_PM.png"/></a></figure></div></div><p id="ad30a005-3a0b-45d2-863e-aa5da1c4a81d" class="">7. 若选择创建钱包，会进入以下界面。创建密码（至少8位），选择同意条款，点击&quot;Create&quot;。</p><p id="e7fa2313-aaf0-441c-aabb-a10f21006657" class="">8. 点击写有“CLICK HERE TO REVEAL SECRET WORDS&quot;的灰色方框进行助记词解锁。助记词为12个英文单词。这些助记词需要保存好，最好复制保存到安全的地方。保存好助记词后点击“Next&quot;进入下一页面。</p><figure id="afc9969d-c8ac-4fe6-997c-97d4591fa556" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_9.02.01_PM.png"><img style="width:720px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_9.02.01_PM.png"/></a></figure><p id="86472d01-09c0-4798-adf3-45726c7265b0" class="">9. 按照助记词的顺序依次点击下面的十二个单词。选择完成后点击&quot;Confirm&quot;进入钱包。</p><p id="cfe02a79-8093-46a3-a347-cc7e5cd44aad" class="">10. 进入钱包主页。</p><div id="1caa7951-c64a-478f-9f5a-a82cfcc07905" class="column-list"><div id="18a33da0-6690-4ea2-beb4-e36db5a2fd78" style="width:50%" class="column"><figure id="5d0ce763-61be-4b5e-92ed-2bb0c5895a12" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_9.03.39_PM.png"><img style="width:2216px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_9.03.39_PM.png"/></a></figure></div><div id="328cd238-4437-4a3b-97a2-c53c50c7cceb" style="width:50%" class="column"><figure id="cff7f23b-7035-4e20-bec0-1ab052325420" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_10.54.16_PM.png"><img style="width:240px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_10.54.16_PM.png"/></a></figure></div></div><p id="f65c1265-771f-4ac1-a98d-b1de2f652da6" class="">11. 登陆之后之后每次可点击Chrome右上角的小狐狸插件按钮进行账户查看。</p><p id="0509c55b-32bd-4652-9704-2d645b833cc5" class="">12. 设置好了metamask以后，点击 <a href="https://opensea.io/account">这里</a> 会跳转至你的账户页面。在屏幕最上方会弹出一个your wallet is not yet connected (你的钱包未连接)  的提示。但不必慌张！这是正常提示。</p><p id="fcc8b2a5-cdce-48ac-83ef-09d568c4965e" class="">
+</p><figure id="011f6381-5066-49ff-bc59-f102144065bf" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen-Shot-2020-05-08-at-7.00.04-PM.png"><img style="width:1434px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen-Shot-2020-05-08-at-7.00.04-PM.png"/></a></figure><p id="65296ece-c3bd-418e-a60a-e72fd6798643" class="">
+</p><p id="cf9edee7-22dd-4526-9903-80b9cd4afeeb" class="">13.  点击绿色的Unlock your Wallet (解锁你的钱包) 按钮后，会跳出一个钱包的弹窗。在弹窗的界面根据指示请点击连接钱包 (Connect your wallet或是Unlock your wallet)并同意条款，这样你的metamask账号就与OpenSea相连</p><p id="7e4a7020-7b29-49ff-90d6-cd0c9e1be025" class="">14.  进入<a href="https://opensea.io/assets/alpacacity">https://opensea.io/assets/alpacacity</a> 就可以选择你想购买的羊驼啦</p><figure id="11cc67e7-3745-4e98-9c06-d3a30515d1dd" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_8.00.36_PM.png"><img style="width:2558px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_8.00.36_PM.png"/></a></figure><p id="1e341557-e2e4-4740-bae9-80f784f0ccaf" class="">
+</p><p id="ba94140b-ed2a-43a1-aa20-ac8e5027405e" class="">15.  进入产品页面点击Buy，如果你的资金充足，MetaMask会有一个类似下面这样的小窗口弹出，点击confirm，你的交易被系统进行处理（有时会需要几分钟）。之后你的屏幕上就会显示购买成功的提示。点击View my item你就能看到你的钱包地址下所有拥有的所有样啦！</p><p id="9aa125ca-c0d9-4b8a-88d8-d14f0004bebc" class="">
+</p><figure id="41546c6f-90ef-453e-be87-42ef9756bed5" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_11.34.38_PM.png"><img style="width:240px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-01_at_11.34.38_PM.png"/></a></figure><p id="ac4d43bb-5423-48d2-a78d-57c1b2a1ef69" class="">
+</p><p id="f1cb0ed6-5ff5-4358-91c1-f03646ece6d7" class="">温馨提示：在Opensea的产品页面中，min bid代表该产品是拍卖产品，显示的会是其目前的竞标价格。Price代表该产品是可直接购买的，显示的是其一口价。</p><p id="6ac11755-bcc9-4ca1-82a0-3252d1cc3f3f" class="">
+</p><figure id="e4b7bec4-1236-4b74-90c0-be4715af623d" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/WechatIMG1583.jpeg"><img style="width:720px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/WechatIMG1583.jpeg"/></a></figure><p id="38c58abe-5ae2-4689-9ca5-1490765e80b5" class="">
+</p><p id="65b9790d-ec0f-4439-899c-76d1ff9d83e0" class="">
+</p><p id="be9d2d86-8ce9-4347-8c13-5bfe37659e98" class="">
+</p><h3 id="54c11a8b-8aa4-4922-a37f-bec2490b094e" class="">手机版</h3><hr id="f7bb1567-31c8-4a3d-a1ad-e46ea31db2c6"/><p id="de010ddd-f7f3-4bcc-b5c4-245d76a4e245" class="">1. 在App Store下载TokenPocket的App。(可在设置中将语言换成中文）</p><div id="d4587f46-2a3a-42b6-8bbe-5f746ec751e4" class="column-list"><div id="a4bf0650-9d73-48ab-874c-fe9c4913f39b" style="width:50%" class="column"><figure id="7129f7e3-42ba-4f05-b645-0c1d52c570ab" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_8.53.00_PM.png"><img style="width:288px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_8.53.00_PM.png"/></a></figure></div><div id="39338f9f-bd59-4f0b-9b29-b45f2cc6cead" style="width:50%" class="column"><figure id="1b185a10-e40a-4d3e-ba17-cb711af1c1f5" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/WechatIMG35.jpeg"><img style="width:240px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/WechatIMG35.jpeg"/></a></figure></div></div><p id="959babc9-c0c9-4b05-8b1c-8ded4f58540b" class="">
+</p><p id="847c6983-44f3-4791-ae33-b38644805cce" class="">2.  进入钱包后点击“我有钱包“进入添加钱包页面。选择使用私钥或者助记词(助记词如何获取请看电脑版教程）来进行钱包导入。设置好之后将会进入钱包主页面。</p><div id="78977b7f-ddda-4ec8-a7b8-a7f9528e2209" class="column-list"><div id="db122786-f11d-415d-8a22-93e1094b4546" style="width:50.000000000000014%" class="column"><figure id="dd49bec2-7f47-474f-a2d1-5afc55c8ca89" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/WechatIMG36.jpeg"><img style="width:336px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/WechatIMG36.jpeg"/></a></figure></div><div id="d79866ad-16ca-4ab1-8bbb-8af0e2ffa088" style="width:50%" class="column"><figure id="9cdc9d58-2c36-406c-8c69-3da35185e343" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/WechatIMG37.jpeg"><img style="width:336px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/WechatIMG37.jpeg"/></a></figure><p id="7c33a47b-8d5f-444a-9f65-2f23145cc628" class="">
+</p></div></div><p id="c586e28a-f750-45b6-9961-1a87c6445e37" class="">
+</p><p id="ca065d26-06bf-4a1e-9664-dbd0dafb6649" class="">3. 点击发现页面，搜索 <a href="https://opensea.io/assets/alpacacity">https://opensea.io/assets/alpacacity</a>  并点击前往DApp 即可进入Alpaca City商城。你可以尽情挑选你喜爱的羊驼（点开boost可以看羊驼的能量值哦）</p><figure id="64d7a9a1-3d71-433f-a357-0283736a72b9" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_10.09.00_PM.png"><img style="width:1414px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_10.09.00_PM.png"/></a></figure><p id="334bb777-4683-4da9-9fe0-bba083e6eb42" class="">
+</p><p id="72395aef-40b9-4d54-a83f-b1064496c31c" class="">4.  在商品页面中，点击BUY NOW，就能完成下单指令。这时候屏幕会弹出窗口，稍等片刻会有跳转到支付页面，点击确认支付并填入你import ethereum钱包时设置的密码即可。交易可能需要几分钟时间通过，稍等片刻后就会有进入交易成功的界面。点击View my items就能看到你所拥有的所有羊驼啦。</p><figure id="bf7f8490-a3c2-4df5-be8c-232e3a6aa969" class="image"><a href="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_10.10.11_PM.png"><img style="width:1474px" src="%E5%A6%82%E4%BD%95%E5%9C%A8%20OpenSea%20%E8%B4%AD%E4%B9%B0%E7%BE%8A%E9%A9%BC%20f37fff24c79e4c9ea8cc83638f8b1de7/Screen_Shot_2020-11-02_at_10.10.11_PM.png"/></a></figure><p id="0becddb4-0f92-4e53-8ae1-779b6216a843" class="">
+</p><p id="68439fbf-b64f-4d38-8518-a01ee1a9a3db" class="">无论你在哪里购买的或者获赠的羊驼，都可以在 <a href="https://alpaca.city/alpacas">https://alpaca.city/alpacas</a> 查看自己的羊</p><p id="a0549c8f-9f02-4b98-829a-b6132ba05529" class="">
+</p><p id="16fc5ab7-c741-4df3-9905-c7e82c95196f" class="">
+</p><p id="3af391e9-2337-43a6-942e-ab6cea871840" class="">
+</p><p id="85abe1e2-641d-4978-9a3f-0704ac30d26e" class="">
+</p></div></article></body></html>
